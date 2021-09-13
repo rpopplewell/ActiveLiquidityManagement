@@ -1,0 +1,12 @@
+SELECT
+	block_id,
+	block_timestamp,
+	pool_address,
+	pool_name,
+	price_0_1,
+	price_1_0,
+	tick,
+  	virtual_liquidity_adjusted
+	from uniswapv3.pool_stats
+	where pool_address = '0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8' and BLOCK_ID < 12867000
+	order by block_id asc
